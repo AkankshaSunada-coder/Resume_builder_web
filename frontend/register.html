@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          Segoe UI,
+          Arial,
+          sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background: radial-gradient(
+          circle at center,
+          #0a6fc2 60%,
+          #085ea0 100%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .register-container {
+        background: #fff;
+        padding: 50px;
+        width: 420px; /* slightly smaller than login for balance */
+        border-radius: 20px; /* clean round edges */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        text-align: center;
+      }
+
+      .register-container h2 {
+        margin-bottom: 30px;
+        color: #0a6fc2;
+        font-size: 28px; /* reduced from 32px */
+        font-weight: bold;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .input-group label {
+        font-size: 18px; /* reduced from 20px */
+        color: #033966;
+        font-weight: 600;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 15px; /* slightly smaller */
+        margin-top: 10px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        outline: none;
+        font-size: 16px; /* reduced from 18px */
+      }
+
+      .input-group input:focus {
+        border-color: #0a6fc2;
+      }
+
+      .register-btn {
+        width: 100%;
+        padding: 18px;
+        background: #0a6fc2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 20px; /* reduced from 22px */
+        font-weight: bold;
+      }
+
+      .register-btn:hover {
+        background: #085ea0;
+      }
+
+      .guest-btn {
+        width: 100%;
+        padding: 16px;
+        margin-top: 15px;
+        background: #ddd;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .guest-btn:hover {
+        background: #ccc;
+      }
+
+      .login-link {
+        margin-top: 20px;
+        font-size: 16px; /* slightly smaller */
+      }
+
+      .login-link a {
+        color: #0d50a9;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="register-container">
+      <h2>Register</h2>
+
+      <form action="index.html">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required />
+        </div>
+
+        <div class="input-group">
+          <label>Confirm Password</label>
+          <input type="password" placeholder="Confirm your password" required />
+        </div>
+
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+
+      <div class="login-link">
+        Already have an account?
+        <a href="login.html">Login</a>
+      </div>
+
+      <form action="index.html">
+        <button class="guest-btn">Continue without account</button>
+      </form>
+    </div>
+  </body>
+</html>
