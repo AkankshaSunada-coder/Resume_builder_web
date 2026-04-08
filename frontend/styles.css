@@ -1,0 +1,120 @@
+/* Global */
+body {
+  font-family:
+    Segoe UI,
+    Arial,
+    sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Header */
+header {
+  background-color: #0078d7; /* Windows blue */
+  color: white;
+  padding: 25px;
+  text-align: center;
+  width: 100%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px; /* larger sidebar */
+  background: #2d2d2d;
+  color: white;
+  height: 100vh;
+  padding-top: 30px;
+  position: fixed;
+  font-size: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background: #444;
+}
+
+/* Container */
+.container {
+  margin-left: 260px;
+  margin-top: 30px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  width: 75%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  font-size: 18px;
+}
+
+/* Search */
+.search-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-section input {
+  width: 65%;
+  padding: 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.search-section button {
+  padding: 18px 28px;
+  margin-left: 12px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.search-section button:hover {
+  background-color: #005a9e;
+}
+
+/* Grid for templates */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fafafa;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card:hover {
+  background: #e6f0ff;
+  border-color: #0078d7;
+}

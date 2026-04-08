@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Main Dashboard - Resume Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Choose a Resume Template</h1>
+    </header>
+
+    <nav class="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="drafts.html">My Drafts</a></li>
+        <li><a href="../templates/resume_template.html">Templates</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- Search -->
+      <section class="search-section">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by job title, sector..."
+        />
+        <button onclick="searchTemplates()">Search</button>
+      </section>
+
+      <!-- Drafts -->
+      <section>
+        <h2>Recently Updated Drafts</h2>
+        <ul>
+          <li><strong>Software Engineer Resume</strong> – Updated 2 hrs ago</li>
+          <li><strong>Marketing Manager Resume</strong> – Updated 1 day ago</li>
+        </ul>
+      </section>
+
+      <!-- Templates -->
+      <section>
+        <h2>Popular Templates</h2>
+        <div class="grid" id="templateList">
+          <div class="card">Modern Resume</div>
+          <div class="card">Classic Resume</div>
+          <div class="card">Minimal Resume</div>
+          <div class="card">Creative Resume</div>
+          <div class="card">Corporate Resume</div>
+          <div class="card">Technical Resume</div>
+          <div class="card">Fresher Resume</div>
+          <div class="card">Designer Resume</div>
+        </div>
+      </section>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
