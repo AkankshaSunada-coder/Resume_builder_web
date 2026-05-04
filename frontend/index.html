@@ -6,23 +6,30 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Choose a Resume Template</h1>
-    </header>
-
+    <!-- Sidebar -->
     <nav class="sidebar">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="drafts.html">My Drafts</a></li>
-        <li><a href="../templates/resume_template.html">Templates</a></li>
+        <li><a href="/resume_template.html">Templates</a></li>
         <li><a href="profiles.html">Profiles</a></li>
         <li><a href="notifications.html">Notifications</a></li>
         <li><a href="settings.html">Settings</a></li>
       </ul>
     </nav>
 
-    <div class="container">
-      <!-- Search -->
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Welcome Section -->
+      <section class="welcome-section">
+        <h1>Welcome, User!</h1>
+        <h2>Choose your template to get started</h2>
+        <div class="character-images">
+          <img src="character1.webp" alt="img 1" />
+        </div>
+      </section>
+
+      <!-- Search Section -->
       <section class="search-section">
         <input
           type="text"
@@ -32,27 +39,45 @@
         <button onclick="searchTemplates()">Search</button>
       </section>
 
-      <!-- Drafts -->
-      <section>
-        <h2>Recently Updated Drafts</h2>
-        <ul>
-          <li><strong>Software Engineer Resume</strong> – Updated 2 hrs ago</li>
-          <li><strong>Marketing Manager Resume</strong> – Updated 1 day ago</li>
-        </ul>
+      <!-- Recent Templates -->
+      <section class="recent-section">
+        <h2>Recently Used templates</h2>
+        <div class="recent-grid">
+          <div class="recent-card">
+            Software Engineer Resume – Updated 2 hrs ago
+          </div>
+          <div class="recent-card">
+            Marketing Manager Resume – Updated 1 day ago
+          </div>
+        </div>
       </section>
 
-      <!-- Templates -->
-      <section>
+      <!-- Popular Templates -->
+      <section class="popular-section">
         <h2>Popular Templates</h2>
-        <div class="grid" id="templateList">
-          <div class="card">Modern Resume</div>
-          <div class="card">Classic Resume</div>
-          <div class="card">Minimal Resume</div>
-          <div class="card">Creative Resume</div>
-          <div class="card">Corporate Resume</div>
-          <div class="card">Technical Resume</div>
-          <div class="card">Fresher Resume</div>
-          <div class="card">Designer Resume</div>
+        <div class="popular-scroll">
+          <div class="a4-card">Modern Resume</div>
+          <div class="a4-card">Classic Resume</div>
+          <div class="a4-card">Minimal Resume</div>
+          <div class="a4-card">Creative Resume</div>
+          <div class="a4-card">Corporate Resume</div>
+          <!-- More card -->
+          <a href="../templates/resume_template.html" class="more-card"
+            >(+) More Templates</a
+          >
+        </div>
+      </section>
+
+      <!-- Drafts Section -->
+      <section class="drafts-section">
+        <h2>My Drafts</h2>
+        <div class="recent-grid">
+          <!-- Example draft -->
+          <div class="draft-card">
+            Software Engineer Resume<br />Last edited 10 mins ago
+          </div>
+          <!-- If no drafts -->
+          <div class="draft-card">No drafts available</div>
         </div>
       </section>
     </div>
