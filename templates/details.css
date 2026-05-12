@@ -46,22 +46,22 @@ body {
 
 .main-content {
   margin-left: 220px;
-  padding: 40px;
+  padding: 30px;
   min-height: 100vh;
   overflow-y: auto;
 }
 
 .form-section {
-  margin: 0 auto;
+  margin: 10px auto;
   align-items: start;
   justify-content: center;
   background: #fff;
-  padding: 40px;
+  padding: 30px;
   width: 1000px;
   height: 100%;
   border-radius: 5px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
   text-align: left;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -70,7 +70,7 @@ body {
 
 .step input {
   width: 50%;
-  padding: 14px;
+  padding: 15px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -83,6 +83,17 @@ body {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.step textarea {
+  width: 700px;
+  height: 120px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin: 10px auto;
 }
 
 .nav-buttons {
@@ -103,9 +114,9 @@ body {
 }
 
 #prevBtn {
-  background: #ccc;
+  background: #cda66f;
 }
 #nextBtn {
-  background: #0078d7;
+  background: #23a2eb;
   color: white;
 }

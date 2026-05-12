@@ -34,7 +34,7 @@ function openTemplate(templateName) {
   localStorage.setItem("recentDraft", templateName);
 
   // Redirect to editor page
-  window.location.href = `editor.html?template=${templateName}`;
+  window.location.href = `details.html?template=${templateName}`;
 }
 
 function updateSections() {
