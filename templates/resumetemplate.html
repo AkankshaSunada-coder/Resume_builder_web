@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resume Templates</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f9f9f9;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      p {
+        text-align: center;
+        color: #555;
+      }
+      .templates-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+        margin-top: 30px;
+      }
+      .template-card {
+        flex: 0 0 220px;
+        height: 300px; /* A4-like proportion */
+        background: #fafafa;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .template-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .template-card h3 {
+        margin-bottom: 10px;
+        color: #222;
+      }
+      .template-card p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+      .template-card button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .template-card button:hover {
+        background-color: #0056b3;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+        color: gray;
+      }
+      .template-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Title -->
+    <h1><strong>Resume Templates</strong></h1>
+    <h2>Select a style to start building your resume.</h2>
+    <hr />
+
+    <li><a href="templates"></a></li>
+
+    <!-- Template Options -->
+    <!-- Template Overview -->
+    <div class="templates-container">
+      <div class="template-grid">
+        <div
+          class="template-card"
+          ,
+          onclick="openTemplate('../templates/no1.html')"
+        >
+          <h3>Modern</h3>
+          <p>Clean, bold design.</p>
+        </div>
+
+        <div
+          class="template-card"
+          onclick="openTemplate('../templates/no2.html')"
+        >
+          <h3>Classic</h3>
+          <p>Traditional layout.</p>
+        </div>
+
+        <div
+          class="template-card"
+          onclick="openTemplate('../templates/no3.html')"
+        >
+          <h3>Minimal</h3>
+          <p>Simple and elegant.</p>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('no4')">
+          <h3>Creative</h3>
+          <p>Stylish and unique.</p>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('no5')">
+          <h3>Corporate</h3>
+          <p>Professional format.</p>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('no6')">
+          <h3>Technical</h3>
+          <p>For engineers & developers.</p>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('no7')">
+          <h3>Fresher</h3>
+          <p>Beginner-friendly layout.</p>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('no8')">
+          <h3>Designer</h3>
+          <p>Creative portfolio style.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

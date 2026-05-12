@@ -65,3 +65,9 @@ function updateSections() {
 
 // Run on page load
 window.onload = updateSections;
+
+// Function to handle "Start Now" button click
+function createResume() {
+  // Redirect the user to your resume template page
+  window.location.href = "../templates/resumetemplate.html";
+}

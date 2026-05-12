@@ -29,7 +29,7 @@ git checkout -b feature-yourname
 
 ### 3.commit your changes
  git add .
-git commit -m "Describe your changes here"
+git commit -m "Describe your changes here" //feat(auth):""
 
 ### 4.Push your branch
 git push origin feature-yourname
