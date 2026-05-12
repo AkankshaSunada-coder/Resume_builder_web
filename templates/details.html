@@ -23,30 +23,35 @@
       <section class="form-section">
         <form id="resumeForm">
           <!-- Step 1: Contacts -->
-           <h1>Contacts</h1>
+          <div class="step" id="step-1">
+            <h1>Contacts</h1>
             <h2>
               Add your up-to-date contact information so employers can reach
               you.
             </h2>
-          <div class="step" id="step-1">
+            <p>NAME:</p>
             <input
               type="text"
               name="firstName"
               placeholder="First name"
               required
             />
+            <p>LAST NAME:</p>
             <input
               type="text"
               name="lastName"
               placeholder="Last name"
               required
             />
+            <p>JOB TITLE:</p>
             <input
               type="text"
               name="jobTitle"
               placeholder="Desired job title"
             />
+            <p>PHONE:</p>
             <input type="tel" name="phone" placeholder="Phone" />
+            <p>EMAIL:</p>
             <input type="email" name="email" placeholder="Email" />
           </div>
 
@@ -57,14 +62,19 @@
               List your work experience starting with the most recent position
               first.
             </h2>
+            <p>JOB TITLE:</p>
             <input type="text" name="jobTitle" placeholder="Job title" />
+            <p>EMPLOYER:</p>
             <input type="text" name="employer" placeholder="Employer" />
+            <p>LOCATION:</p>
             <input type="text" name="location" placeholder="Location" />
+            <p>START DATE:</p>
             <input
               type="text"
               name="startDate"
               placeholder="Start date (MM/YYYY)"
             />
+            <p>END DATE:</p>
             <input
               type="text"
               name="endDate"
@@ -79,15 +89,20 @@
             <h2>
               Add your education details - even if you haven’t graduated yet.
             </h2>
+            <p>SCHOOL/COLLEGE NAME:</p>
             <input
               type="text"
               name="schoolName"
               placeholder="School/College name"
             />
+            <p>DEGREE:</p>
             <input type="text" name="degree" placeholder="Degree" />
+            <p>LOCATION:</p>
             <input type="text" name="location" placeholder="Location" />
-            <input type="text" name="startDate" placeholder="Start date" />
-            <input type="text" name="endDate" placeholder="End date" />
+            <p>START DATE:</p>
+            <input type="text" name="startDate" placeholder="Start date (MM/YYYY)" />
+            <p>END DATE:</p>
+            <input type="text" name="endDate" placeholder="End date (MM/YYYY)" />
           </div>
 
           <!-- Step 4: Skills -->
