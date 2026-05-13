@@ -1,179 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>User Profile</title>
-  <style>
-    body {
-      margin:0; 
-      font-family:Arial,sans-serif; 
-      display:flex; 
-      background:#f4f6f9;
-    }
-    .main {
-      flex:1;
-      padding:20px;
-      max-width: 1000px;
-       margin: 0 auto;
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Profile</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        background: #f4f6f9;
       }
-    .card, .section {
-      background:#fff; 
-      padding:25px; 
-      border-radius:10px;
-       box-shadow:0 2px 6px rgba(0,0,0,.1);
-        margin-bottom:20px;
+      .main {
+        flex: 1;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
       }
-    .info {
-      display:flex; 
-      align-items:center;
-       justify-content:space-between;
+      .card,
+      .section {
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
       }
-    .info-left {
-      display:flex; 
-      align-items:center;
-    }
-    .info-left img {
-      width:70px; 
-      height:70px;
-       border-radius:50%; 
-       margin-right:15px;
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
-    button {
-      background:#3498db; 
-      color:#fff; 
-      border:none; 
-      padding:8px 12px;
-      border-radius:5px; 
-      cursor:pointer;
-    }
-    input {
-      margin:5px 0; 
-      padding:8px; 
-      width:100%; 
-      border:1px solid #ccc; 
-      border-radius:4px;
-    }
-    .hidden {display:none;}
-    #editWindow {
-  max-width: 900px;   
-  padding: 30px;      
-  font-size: 16px;    
-  margin: 0 auto;     
-}
-#editWindow input {
-  padding: 12px;      
-  font-size: 15px;   
-}
-#editWindow button {
-  padding: 10px 16px; 
-  font-size: 15px;
-}
-#detailsBox {
-  max-width: 900px;  
-  padding: 25px;      
-  font-size: 16px;    
-}
-  </style>
-</head>
-<body>
- <link rel="stylesheet" href="styles.css" />
-  <!-- Sidebar -->
-  <nav class="sidebar">
+      .info-left {
+        display: flex;
+        align-items: center;
+      }
+      .info-left img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      button {
+        background: #3498db;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input {
+        margin: 5px 0;
+        padding: 8px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .hidden {
+        display: none;
+      }
+      #editWindow {
+        max-width: 900px;
+        padding: 30px;
+        font-size: 16px;
+        margin: 0 auto;
+      }
+      #editWindow input {
+        padding: 12px;
+        font-size: 15px;
+      }
+      #editWindow button {
+        padding: 10px 16px;
+        font-size: 15px;
+      }
+      #detailsBox {
+        max-width: 900px;
+        padding: 25px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Sidebar -->
+    <nav class="sidebar">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="drafts.html">My Drafts</a></li>
-        <li><a href="/resume_template.html">Templates</a></li>
-        <li><a href="profiles.html">Profiles</a></li>
-        <li><a href="notifications.html">Notifications</a></li>
-        <li><a href="settings.html">Settings</a></li>
+        <li><a href="../templates/resumetemplate.html">Templates</a></li>
+        <li><a href="profile.html">Profiles</a></li>
+        <li><a href="notification.html">Notifications</a></li>
+        <li><a href="settingpage.html">Settings</a></li>
       </ul>
     </nav>
 
-  <!-- Main content -->
-  <div class="main">
-    <h2>Profile</h2>
+    <!-- Main content -->
+    <div class="main">
+      <h2>Profile</h2>
 
-    <!-- Profile View -->
-    <div id="profileView">
-      <div class="card">
-        <div class="info">
-          <div class="info-left">
-            <img id="profilePic" src="https://via.placeholder.com/70" alt="Profile">
-            <div>
-              <h3 id="name">Your Name</h3>
-              <p id="occupation">Your Occupation</p>
-              <p id="email">Your Email</p>
+      <!-- Profile View -->
+      <div id="profileView">
+        <div class="card">
+          <div class="info">
+            <div class="info-left">
+              <img
+                id="profilePic"
+                src="https://via.placeholder.com/70"
+                alt="Profile"
+              />
+              <div>
+                <h3 id="name">Your Name</h3>
+                <p id="occupation">Your Occupation</p>
+                <p id="email">Your Email</p>
+              </div>
             </div>
+            <button onclick="openEdit()">Edit Profile</button>
           </div>
-          <button onclick="openEdit()">Edit Profile</button>
+        </div>
+
+        <div id="detailsBox" class="section">
+          <h3>Details</h3>
+          <p><b>Full Name:</b> <span id="fullName">Your Name</span></p>
+          <p><b>Occupation:</b> <span id="job">Your Occupation</span></p>
+          <p><b>Phone:</b> <span id="phone">Your Phone</span></p>
+          <p><b>Email:</b> <span id="userEmail">Your Email</span></p>
+          <p><b>Location:</b> <span id="location">Your Location</span></p>
         </div>
       </div>
 
-      <div id="detailsBox" class="section">
-        <h3>Details</h3>
-        <p><b>Full Name:</b> <span id="fullName">Your Name</span></p>
-        <p><b>Occupation:</b> <span id="job">Your Occupation</span></p>
-        <p><b>Phone:</b> <span id="phone">Your Phone</span></p>
-        <p><b>Email:</b> <span id="userEmail">Your Email</span></p>
-        <p><b>Location:</b> <span id="location">Your Location</span></p>
+      <!-- Edit Window -->
+      <div id="editWindow" class="hidden section">
+        <h3>Edit Your Details</h3>
+        <input id="nameInput" placeholder="Full Name" />
+        <input id="occupationInput" placeholder="Occupation" />
+        <input id="emailInput" placeholder="Email" />
+        <input id="phoneInput" placeholder="Phone" />
+        <input id="locationInput" placeholder="Location" />
+        <input
+          type="file"
+          id="picInput"
+          accept="image/*"
+          onchange="loadPic(event)"
+        />
+        <button onclick="saveProfile()">Save</button>
+        <button onclick="closeEdit()">Cancel</button>
       </div>
     </div>
 
-    <!-- Edit Window -->
-    <div id="editWindow" class="hidden section">
-      <h3>Edit Your Details</h3>
-      <input id="nameInput" placeholder="Full Name">
-      <input id="occupationInput" placeholder="Occupation">
-      <input id="emailInput" placeholder="Email">
-      <input id="phoneInput" placeholder="Phone">
-      <input id="locationInput" placeholder="Location">
-      <input type="file" id="picInput" accept="image/*" onchange="loadPic(event)">
-      <button onclick="saveProfile()">Save</button>
-      <button onclick="closeEdit()">Cancel</button>
-    </div>
-  </div>
+    <script>
+      function openEdit() {
+        // Pre-fill edit form with current values
+        document.getElementById("nameInput").value =
+          document.getElementById("name").textContent;
+        document.getElementById("occupationInput").value =
+          document.getElementById("occupation").textContent;
+        document.getElementById("emailInput").value =
+          document.getElementById("email").textContent;
+        document.getElementById("phoneInput").value =
+          document.getElementById("phone").textContent;
+        document.getElementById("locationInput").value =
+          document.getElementById("location").textContent;
 
-  <script>
-    function openEdit() {
-      // Pre-fill edit form with current values
-      document.getElementById("nameInput").value = document.getElementById("name").textContent;
-      document.getElementById("occupationInput").value = document.getElementById("occupation").textContent;
-      document.getElementById("emailInput").value = document.getElementById("email").textContent;
-      document.getElementById("phoneInput").value = document.getElementById("phone").textContent;
-      document.getElementById("locationInput").value = document.getElementById("location").textContent;
-
-      document.getElementById("profileView").classList.add("hidden");
-      document.getElementById("editWindow").classList.remove("hidden");
-    }
-
-    function closeEdit() {
-      document.getElementById("editWindow").classList.add("hidden");
-      document.getElementById("profileView").classList.remove("hidden");
-    }
-
-    function saveProfile() {
-      document.getElementById("name").textContent = document.getElementById("nameInput").value;
-      document.getElementById("occupation").textContent = document.getElementById("occupationInput").value;
-      document.getElementById("email").textContent = document.getElementById("emailInput").value;
-      document.getElementById("fullName").textContent = document.getElementById("nameInput").value;
-      document.getElementById("job").textContent = document.getElementById("occupationInput").value;
-      document.getElementById("phone").textContent = document.getElementById("phoneInput").value;
-      document.getElementById("userEmail").textContent = document.getElementById("emailInput").value;
-      document.getElementById("location").textContent = document.getElementById("locationInput").value;
-
-      closeEdit();
-    }
-
-    function loadPic(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          document.getElementById("profilePic").src = e.target.result;
-        };
-        reader.readAsDataURL(file);
+        document.getElementById("profileView").classList.add("hidden");
+        document.getElementById("editWindow").classList.remove("hidden");
       }
-    }
-  </script>
-</body>
+
+      function closeEdit() {
+        document.getElementById("editWindow").classList.add("hidden");
+        document.getElementById("profileView").classList.remove("hidden");
+      }
+
+      function saveProfile() {
+        document.getElementById("name").textContent =
+          document.getElementById("nameInput").value;
+        document.getElementById("occupation").textContent =
+          document.getElementById("occupationInput").value;
+        document.getElementById("email").textContent =
+          document.getElementById("emailInput").value;
+        document.getElementById("fullName").textContent =
+          document.getElementById("nameInput").value;
+        document.getElementById("job").textContent =
+          document.getElementById("occupationInput").value;
+        document.getElementById("phone").textContent =
+          document.getElementById("phoneInput").value;
+        document.getElementById("userEmail").textContent =
+          document.getElementById("emailInput").value;
+        document.getElementById("location").textContent =
+          document.getElementById("locationInput").value;
+
+        closeEdit();
+      }
+
+      function loadPic(event) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("profilePic").src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+  </body>
 </html>
