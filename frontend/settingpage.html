@@ -12,22 +12,37 @@
         background-color: #f4f4f4;
       }
       .sidebar {
-        width: 200px;
-        background: #333;
-        color: #fff;
+        width: 180px;
+        background: #2d2d2d;
+        color: white;
         height: 100vh;
+        padding-top: 30px;
         position: fixed;
-        padding-top: 20px;
+        font-size: 20px;
+        overflow-y: auto;
       }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar li {
+        margin: 20px 0;
+      }
+
       .sidebar a {
-        display: block;
-        padding: 10px;
-        color: #fff;
+        color: white;
         text-decoration: none;
+        padding: 12px 20px;
+        display: block;
+        border-radius: 6px;
       }
+
       .sidebar a:hover {
         background: #444;
       }
+
       .main {
         margin-left: 220px;
         padding: 20px;
@@ -77,11 +92,10 @@
     <nav class="sidebar">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="drafts.html">My Drafts</a></li>
-        <li><a href="/resume_template.html">Templates</a></li>
-        <li><a href="profiles.html">Profiles</a></li>
-        <li><a href="notifications.html">Notifications</a></li>
-        <li><a href="settings.html">Settings</a></li>
+        <li><a href="../templates/resumetemplate.html">Templates</a></li>
+        <li><a href="profile.html">Profiles</a></li>
+        <li><a href="notification.html">Notifications</a></li>
+        <li><a href="settingpage.html">Settings</a></li>
       </ul>
     </nav>
 
