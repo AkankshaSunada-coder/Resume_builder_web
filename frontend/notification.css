@@ -1,0 +1,131 @@
+body {
+    font-family: 'Playfair', sans-serif;
+    background: #f2f2f2;
+    text-align: center;
+    
+    font-weight:normal;
+}
+
+/* Heading */
+h3 {
+    font-size:40px;
+    margin-top: 30px;
+}
+/* Main container */
+.box {
+    width: 900px;
+    align-items:center;
+    margin: 100px auto;
+    padding: 30px;              /* FIXED (was 100px ❌) */
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height:auto;
+    margin-left: 200px;
+   bottom: 150px;
+    
+}
+
+/* Each notification card */
+
+.notification-item {
+    color:#101110;
+    font-size:20px;
+    display: block;
+    align-items: flex-start;
+    gap: 15px;
+    text-align:left;
+    padding: 15px;
+    margin: 30px ;
+    background: #f9f9f9;        /* softer color */
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+     
+        
+       /* FIXED (was right ❌) */
+}
+
+/* Hover */
+.notification-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Content wrapper (IMPORTANT) */
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.content strong {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+/* Sub text */
+.sub-text {
+    font-size: 13px;
+    color: rgb(164, 163, 163);
+   margin: 5px 0 0 0;
+    margin-block-end: 20px;
+    display:block;
+    text-align:left;
+
+}
+
+/* Optional types */
+.success {
+    border-left: 5px solid #28a745;
+}
+
+.error {
+    border-left: 5px solid #dc3545;
+}
+
+.info {
+    border-left: 5px solid #007bff;
+}
+
+/* Read state */
+.read {
+    opacity: 0.6;
+}
+
+/* Button */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 150px;
+   text-align:center;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height:50px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+.back-btn {
+    width:150px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    top:30px;
+    left:30px;
+    height:50px;
+}
+
+.back-btn:hover {
+    opacity: 0.8;
+}
