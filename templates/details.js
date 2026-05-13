@@ -1,5 +1,5 @@
 let currentStep = 1;
-const totalSteps = 6;
+const totalSteps = 5;
 
 function showStep(step) {
   for (let i = 1; i <= totalSteps; i++) {
