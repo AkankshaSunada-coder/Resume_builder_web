@@ -1,0 +1,199 @@
+/* Base styles and typography reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #444444;
+    line-height: 1.5;
+    padding: 40px 20px;
+}
+
+/* Container defining the overall Grid layout */
+.resume-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Two distinct columns: Sidebar and Main Content */
+    grid-gap: 25px 40px;
+}
+
+/* Assigning structural elements to specific grid columns */
+.header {
+    grid-column: 1 / -1; /* Header spans across both columns */
+}
+
+.profile {
+    grid-column: 1; /* Aligns under the main name but takes left column space */
+}
+
+.contact-info {
+    grid-column: 2; /* Sits next to profile section */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.skills {
+    grid-column: 1; /* Left Column Sidebar starts */
+}
+
+.experience {
+    grid-column: 2; /* Right Column main content panel */
+}
+
+.education {
+    grid-column: 1; /* Left Column Sidebar ends */
+}
+
+/* Headers Typography */
+.name {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #5c9943; /* Olive green accented header color from video */
+    font-weight: 800;
+}
+
+.name .thin-text {
+    font-weight: 300;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    color: #222;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Professional Profile Specifics */
+.profile p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Contact Details */
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li, .contact-info a {
+    font-size: 0.9rem;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info .address {
+    margin-top: 15px;
+    color: #888;
+}
+
+/* Skills Layout Styles */
+.skills p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* Experience Layout Styles */
+.job-block {
+    margin-bottom: 25px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.job-title {
+    font-weight: bold;
+    color: #222;
+}
+
+.job-meta {
+    color: #777;
+}
+
+.experience p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.experience ul {
+    margin-left: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.experience li {
+    margin-bottom: 4px;
+}
+
+/* Education Layout Styles */
+.edu-block {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-block .degree {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #222;
+}
+
+.edu-block .school {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.edu-block .edu-meta {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Responsive considerations for smaller viewports */
+@media (max-width: 768px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .header, .profile, .contact-info, .skills, .experience, .education {
+        grid-column: 1;
+    }
+
+    .contact-info {
+        justify-content: flex-start;
+        text-align: left;
+        margin-top: 10px;
+    }
+    
+    .job-header {
+        flex-direction: column;
+    }
+}
