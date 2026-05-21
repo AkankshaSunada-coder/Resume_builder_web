@@ -98,6 +98,8 @@ body {
 
 .nav-buttons {
   margin-top: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-buttons button {
@@ -116,6 +118,12 @@ body {
 #prevBtn {
   background: #cda66f;
 }
+
+#prevBtn:disabled {
+  cursor: not-allowed;
+  background: grey;
+}
+
 #nextBtn {
   background: #23a2eb;
   color: white;
