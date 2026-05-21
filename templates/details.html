@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resume Builder</title>
+    <!-- Link to your CSS -->
+    <link rel="stylesheet" href="details.css" />
+  </head>
+  <body>
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <ul>
+          <li><a href="../frontend/index.html">Home</a></li>
+          <script src="scripts.js"></script>
+          <li><a href="resumetemplate.html">Templates</a></li>
+          <li><a href="../frontend/profiles.html">Profiles</a></li>
+          <li><a href="../frontend/notifications.html">Notifications</a></li>
+          <li><a href="../frontend/settingpage.html">Settings</a></li>
+        </ul>
+      </nav>
+      <!-- Main Form -->
+    </div class="main-content">
+      <section class="form-section">
+        <form id="resumeForm">
+          <!-- Step 1: Contacts -->
+          <div class="step" id="step-1">
+            <h1>Contacts</h1>
+            <h2>
+              Add your up-to-date contact information so employers can reach
+              you.
+            </h2>
+            <p>NAME:</p>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First name"
+              required
+            />
+            <p>LAST NAME:</p>
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+              required
+            />
+            <p>JOB TITLE:</p>
+            <input
+              type="text"
+              name="jobTitle"
+              placeholder="Desired job title"
+            />
+            <p>PHONE:</p>
+            <input type="tel" name="phone" placeholder="Phone" />
+            <p>EMAIL:</p>
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+
+          <!-- Step 2: Experience -->
+          <div class="step" id="step-2" style="display: none">
+            <h1>Experience</h1>
+            <h2>
+              List your work experience starting with the most recent position
+              first.
+            </h2>
+            <p>JOB TITLE:</p>
+            <input type="text" name="jobTitle" placeholder="Job title" />
+            <p>EMPLOYER:</p>
+            <input type="text" name="employer" placeholder="Employer" />
+            <p>LOCATION:</p>
+            <input type="text" name="location" placeholder="Location" />
+            <p>START DATE:</p>
+            <input
+              type="text"
+              name="startDate"
+              placeholder="Start date (MM/YYYY)"
+            />
+            <p>END DATE:</p>
+            <input
+              type="text"
+              name="endDate"
+              placeholder="End date (MM/YYYY)"
+            />
+            <textarea name="description" placeholder="Description"></textarea>
+          </div>
+
+          <!-- Step 3: Education -->
+          <div class="step" id="step-3" style="display: none">
+            <h1>Education</h1>
+            <h2>
+              Add your education details - even if you haven’t graduated yet.
+            </h2>
+            <p>SCHOOL/COLLEGE NAME:</p>
+            <input
+              type="text"
+              name="schoolName"
+              placeholder="School/College name"
+            />
+            <p>DEGREE:</p>
+            <input type="text" name="degree" placeholder="Degree" />
+            <p>LOCATION:</p>
+            <input type="text" name="location" placeholder="Location" />
+            <p>START DATE:</p>
+            <input type="text" name="startDate" placeholder="Start date (MM/YYYY)" />
+            <p>END DATE:</p>
+            <input type="text" name="endDate" placeholder="End date (MM/YYYY)" />
+          </div>
+
+          <!-- Step 4: Skills -->
+          <div class="step" id="step-4" style="display: none">
+            <h1>Skills</h1>
+            <textarea
+              name="skills"
+              placeholder="Add your most relevant professional skills"
+            ></textarea>
+          </div>
+
+          <!-- Step 5: Summary -->
+          <div class="step" id="step-5" style="display: none">
+            <h1>Summary</h1>
+            <textarea
+              name="summary"
+              placeholder="Write a short introduction highlighting your experience, skills, and career goals"
+            ></textarea>
+          </div>
+
+          <!-- Navigation -->
+          <div class="nav-buttons">
+            <button type="button" id="prevBtn">Previous</button>
+            <button type="button" id="nextBtn">Next</button>
+          </div>
+        </form>
+    </section>
+    </div>
+    </div>
+    <script src="details.js"></script>
+  </body>
+</html>

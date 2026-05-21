@@ -1,60 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Notifications</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="notification.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Notifications</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="notification.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-<nav class="sidebar">
+  <body>
+    <nav class="sidebar">
       <ul>
-        <li><a href="index.html">Home</a></li> 
-        <li><a href="drafts.html">My Drafts</a></li>
-        <li><a href="/resume_template.html">Templates</a></li>
-        <li><a href="profiles.html">Profiles</a></li>
-        <li><a href="notifications.html">Notifications</a></li>
-        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="../templates/resumetemplate.html">Templates</a></li>
+        <li><a href="profile.html">Profiles</a></li>
+        <li><a href="notification.html">Notifications</a></li>
+        <li><a href="settingpage.html">Settings</a></li>
       </ul>
     </nav>
-    
 
+    <div class="box">
+      <h3>Notifications 🔔</h3>
 
-<div class="box">
-    <h3>Notifications 🔔</h3>
+      <ul id="list">
+        <li class="notification-item" onclick="markRead(this)">
+          Template Updated Successfully
+          <p class="sub-text">
+            <i>Your template has been updated and saved.</i>
+          </p>
+        </li>
 
+        <li class="notification-item" onclick="markRead(this)">
+          Remember to update your Marketing manager Resume
+          <p class="sub-text"><i>Update your marketing resume</i></p>
+        </li>
 
-<ul id="list">
+        <li class="notification-item" onclick="markRead(this)">
+          New Resume Template "Minimal" added.
+          <p class="sub-text"><i>Try it now.</i></p>
+        </li>
+      </ul>
 
-<li class="notification-item" onclick="markRead(this)">
-    Template Updated Successfully
-    <p class="sub-text"><i>Your template has been updated and saved.</i></p>
-</li>
+      <button onclick="clearAll()">Clear All</button>
+    </div>
+    <button class="back-btn" onclick="history.back()">← Go Back</button>
 
-<li class="notification-item" onclick="markRead(this)">
-    Remember to update your Marketing manager Resume
-    <p class="sub-text"><i>Update your marketing resume</i></p>
-</li>
-
-<li class="notification-item" onclick="markRead(this)">
-   New Resume Template "Minimal" added.
-    <p class="sub-text"><i>Try it now.</i></p>
-</li>
-
-</ul>
-
-
-<button onclick="clearAll()">Clear All</button>
-</div>
-<button class="back-btn" onclick="history.back()">
-    ← Go Back
-</button>
-
-
-
-<script src="notification.js"></script>
-
-</body>
+    <script src="notification.js"></script>
+  </body>
 </html>

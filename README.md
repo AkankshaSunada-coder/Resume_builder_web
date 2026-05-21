@@ -1,28 +1,3 @@
-# Resume_builder_web
-
-resume_builder/
-│
-├── frontend/
-│ ├── index.html # Main dashboard page
-│ ├── styles.css # Global styling
-│ ├── scripts.js # Global JS (search, navigation)
-│ ├── profiles.html # User profile page
-│ ├── notifications.html # Notifications page
-│ └── assets/ # Images, icons, fonts
-│
-├── templates/
-│ ├── resume_template.html # Template selection page
-│ └── individual templates (modern.html, classic.html, etc.)
-│
-├── backend/
-│ ├── app.py # Example backend logic
-│ └── api/ # APIs for profiles, notifications
-│
-├── docs/
-│ └── README.md # Collaboration guide
-│
-└── .gitignore
-
 # Resume Builder Project
 
 Welcome! This repository is for Akshatha and friends to collaborate on building a Resume Builder web application.  
@@ -54,7 +29,7 @@ git checkout -b feature-yourname
 
 ### 3.commit your changes
  git add .
-git commit -m "Describe your changes here"
+git commit -m "Describe your changes here" //feat(auth):""
 
 ### 4.Push your branch
 git push origin feature-yourname
@@ -78,3 +53,28 @@ git push origin feature-yourname
 #FFC107	Progress indicators (e.g., completion percentage)
 #DC3545	Error/alert messages```
 ````
+
+# Resume_builder_web
+
+resume_builder/
+│
+├── frontend/
+│ ├── index.html # Main dashboard page
+│ ├── styles.css # Global styling
+│ ├── scripts.js # Global JS (search, navigation)
+│ ├── profiles.html # User profile page
+│ ├── notifications.html # Notifications page
+│ └── assets/ # Images, icons, fonts
+│
+├── templates/
+│ ├── resume_template.html # Template selection page
+│ └── individual templates (modern.html, classic.html, etc.)
+│
+├── backend/
+│ ├── app.py # Example backend logic
+│ └── api/ # APIs for profiles, notifications
+│
+├── docs/
+│ └── README.md # Collaboration guide
+│
+└── .gitignore
