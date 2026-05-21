@@ -1,0 +1,34 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume Preview</title>
+  <link id="templateCSS" rel="stylesheet" />
+</head>
+<body>
+  <div id="resumePreview"></div>
+  <button onclick="window.print()">Print</button>
+  <button onclick="downloadPDF()">Download</button>
+
+  <script>
+    const resumeData = JSON.parse(localStorage.getItem("resumeData"));
+    const template = localStorage.getItem("selectedTemplate");
+
+    // Load the correct CSS file
+    document.getElementById("templateCSS").href = `${template}.css`;
+
+    // Optionally load template-specific JS
+    const script = document.createElement("script");
+    script.src = `${template}.js`;
+    document.body.appendChild(script);
+
+    // Render preview (basic example)
+    document.getElementById("resumePreview").innerHTML = `
+      <h1>${resumeData.firstName} ${resumeData.lastName}</h1>
+      <h2>${resumeData.jobTitle}</h2>
+      <p>${resumeData.email} | ${resumeData.phone}</p>
+      <h3>Experience</h3>
+      <p>${resumeData.employer} - ${resumeData.location}</p>
+      <p>${resumeData.startDate} to ${resumeData.endDate}</p>
+      <p>${resumeData.description}</p>
+    `;
+  </script>
+</body>

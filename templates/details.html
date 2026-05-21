@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="details.css" />
   </head>
   <body>
-      <!-- Sidebar -->
-      <nav class="sidebar">
-        <ul>
-          <li><a href="../frontend/index.html">Home</a></li>
-          <script src="scripts.js"></script>
-          <li><a href="resumetemplate.html">Templates</a></li>
-          <li><a href="../frontend/profiles.html">Profiles</a></li>
-          <li><a href="../frontend/notifications.html">Notifications</a></li>
-          <li><a href="../frontend/settingpage.html">Settings</a></li>
-        </ul>
-      </nav>
-      <!-- Main Form -->
-    </div class="main-content">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="../frontend/index.html">Home</a></li>
+        <script src="scripts.js"></script>
+        <li><a href="resumetemplate.html">Templates</a></li>
+        <li><a href="../frontend/profiles.html">Profiles</a></li>
+        <li><a href="../frontend/notifications.html">Notifications</a></li>
+        <li><a href="../frontend/settingpage.html">Settings</a></li>
+      </ul>
+    </nav>
+    <!-- Main Form -->
+    <div class="main-content">
       <section class="form-section">
         <form id="resumeForm">
           <!-- Step 1: Contacts -->
@@ -100,9 +99,17 @@
             <p>LOCATION:</p>
             <input type="text" name="location" placeholder="Location" />
             <p>START DATE:</p>
-            <input type="text" name="startDate" placeholder="Start date (MM/YYYY)" />
+            <input
+              type="text"
+              name="startDate"
+              placeholder="Start date (MM/YYYY)"
+            />
             <p>END DATE:</p>
-            <input type="text" name="endDate" placeholder="End date (MM/YYYY)" />
+            <input
+              type="text"
+              name="endDate"
+              placeholder="End date (MM/YYYY)"
+            />
           </div>
 
           <!-- Step 4: Skills -->
@@ -122,15 +129,15 @@
               placeholder="Write a short introduction highlighting your experience, skills, and career goals"
             ></textarea>
           </div>
-
-          <!-- Navigation -->
           <div class="nav-buttons">
             <button type="button" id="prevBtn">Previous</button>
+
+            <!-- Navigation -->
+            <button type="submit" id="previewBtn">Preview</button>
             <button type="button" id="nextBtn">Next</button>
           </div>
         </form>
-    </section>
-    </div>
+      </section>
     </div>
     <script src="details.js"></script>
   </body>
